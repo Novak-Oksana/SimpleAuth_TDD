@@ -23,7 +23,7 @@ namespace Tests
         [TestCase("")]
         public void RequestInvalidDataTest(string login)
         {
-            string pass = "12345678";
+            string pass = "11111";
             var resp = _request.Authorize(login, pass).Result;
             Assert.AreEqual(EAuthResponse.IncorrectLogin, resp);
         }
@@ -41,7 +41,7 @@ namespace Tests
         [TestCase("ort@@1")]
         public void RequestErrorTest(string login)
         {
-            string pass = "12345678";
+            string pass = "11111";
             var resp = _request.Authorize(login, pass).Result;
             Assert.AreEqual(EAuthResponse.OtherError, resp);
         }
